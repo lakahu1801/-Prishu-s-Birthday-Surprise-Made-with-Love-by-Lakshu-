@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f7a9d4">
+<title>Happy Birthday Prishu 💗</title>
+<style>
+:root{--pink:#ff80b7;--hot:#e94e9a;--purple:#8a5ce6;--gold:#ffe3a1;--ink:#542d67}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;overflow-x:hidden;font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:radial-gradient(circle at 15% 10%,#fff8ff,transparent 35%),linear-gradient(145deg,#ffe4f2,#f2e3ff 55%,#fff0d5)}
+button{font:700 15px Arial,sans-serif;border:0;border-radius:999px;padding:13px 19px;background:linear-gradient(120deg,var(--hot),var(--purple));color:white;box-shadow:0 8px 24px #a34d9b35;cursor:pointer;margin:5px}
+button.alt{background:#fff9ff;color:#a43f91;border:1px solid #edc2e7;box-shadow:none}
+main{position:relative;z-index:1;width:min(760px,92%);margin:auto;padding:22px 0 42px}
+.card{border:1px solid #ffffffd9;background:#ffffffc9;border-radius:27px;padding:25px 20px;margin:18px 0;box-shadow:0 16px 42px #8c4e8b18;backdrop-filter:blur(10px)}
+.center{text-align:center}.eyebrow{font:700 11px Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;color:#a24f9c}
+h1{font-size:clamp(42px,11vw,76px);line-height:.98;margin:18px 0;background:linear-gradient(110deg,#ee589f,#8c55db,#d29a34);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(25px,6vw,34px);color:#a345a3;margin:8px 0 14px}
+p{font-size:17px;line-height:1.7}.sub{font-size:14px;color:#8d6c99;line-height:1.6}
+#surprise{display:none}.cake{font-size:82px;filter:drop-shadow(0 8px 12px #b45da944);animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-9px) rotate(2deg)}}
+@keyframes shimmer{0%,100%{filter:drop-shadow(0 0 0 #ffe3a1)}50%{filter:drop-shadow(0 0 13px #f3c65c)}}
+#start{animation:shimmer 2s infinite}
+.letter{white-space:normal;text-align:left}.sign{text-align:right;font-weight:bold;color:#b14595}
+.gift{font-size:76px;transition:transform .4s}.gift.open{transform:rotate(-10deg) scale(1.15)}
+.answer{min-height:28px;color:#a33d93;font-weight:bold}
+.heart,.confetti{position:fixed;pointer-events:none;z-index:0;animation:rise linear forwards}
+.heart{bottom:-45px;opacity:.7}@keyframes rise{to{transform:translateY(-115vh) rotate(45deg);opacity:0}}
+.confetti{top:-20px;width:8px;height:14px;border-radius:3px;animation:fall 3.5s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.2}}
+hr{border:0;border-top:1px solid #ead0ee;margin:22px 0}
+footer{text-align:center;padding:15px;font-size:14px;color:#9365a0}
+@media(min-width:600px){.card{padding:32px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main>
+<section class="card center" id="intro">
+<div style="font-size:42px">🌷✨🎀✨🌷</div>
+<p class="eyebrow">a little corner of the internet, made for you</p>
+<h1>Happy Birthday<br>Prishu!</h1>
+<p>Today is all about celebrating <b>YOU</b> — your smile, your heart, and the lovely person you are. 💗</p>
+<div class="cake">🎂</div>
+<button id="start">Open your birthday surprise ✨</button>
+<p class="sub">A tiny surprise from your online friend, with lots of warmth and good wishes. 💌</p>
+</section>
+<div id="surprise">
+<section class="card center">
+<p class="eyebrow">your special day begins here</p>
+<h2>To the birthday star 🌟</h2>
+<p>May your new year of life bring peaceful days, unexpected happiness, beautiful opportunities, and people who make you feel appreciated.</p>
+<button id="music">♫ Play a birthday song</button>
+<p class="sub" id="musicNote">Opens a birthday-song search on YouTube; choose a version you like.</p>
+</section>
+<section class="card">
+<p class="eyebrow">a little letter from the heart</p>
+<h2>Dear Prishu, 💌</h2>
+<div class="letter">
+<p>Happy Birthday, Prishu! 🎂💗</p>
+<p>It’s funny how someone can live miles away and still become a lovely part of your everyday world. Even through a screen, a simple message can brighten a day, bring a smile, and turn an ordinary moment into a memory worth keeping.</p>
+<p>On your special day, I hope life surprises you in the sweetest ways. May you keep finding reasons to laugh, courage when things feel difficult, and people who value you exactly as you are. May your dreams grow bigger, your worries feel lighter, and your heart stay full of hope.</p>
+<p>Thank you for being part of my online world. Wherever life takes us, I’m wishing you kindness, confidence, good health, and so many happy moments ahead. Keep shining in your own way, birthday star. 🌷✨</p>
+<p class="sign">With lots of birthday wishes,<br>Your online friend 💗</p>
+</div>
+</section>
+<section class="card center">
+<p class="eyebrow">something small, just for you</p>
+<h2>Tap to unwrap 🎁</h2>
+<div class="gift" id="gift">🎁</div>
+<button id="unwrap">Open your gift 💝</button>
+<p id="giftText" class="answer" aria-live="polite"></p>
+</section>
+<section class="card center">
+<p class="eyebrow">birthday mini-game</p>
+<h2>How well do you know birthdays? 🎉</h2>
+<p id="question">What is the sweetest birthday gift that costs nothing?</p>
+<div id="choices">
+<button class="alt" data-ok="1">A heartfelt message 💌</button>
+<button class="alt" data-ok="0">A receipt 🧾</button>
+<button class="alt" data-ok="0">An empty box 📦</button>
+</div>
+<p id="feedback" class="answer" aria-live="polite"></p>
+<button id="next" class="alt">Next question ➜</button>
+</section>
+<section class="card center">
+<div style="font-size:42px">💖🌙✨</div>
+<h2>One last wish, Prishu…</h2>
+<p>May this year be gentler, brighter, and full of little moments that remind you how wonderful life can be. Never forget that you deserve friendship, respect, peace, and happiness.</p>
+<p style="font-size:23px;font-weight:bold;color:#a345a3">Keep sparkling, birthday star! 🌟</p>
+<p class="sub">Sending smiles across the distance — one little wish at a time. 💗</p>
+<button id="again" class="alt">Celebrate again 🎊</button>
+</section>
+<footer>Made with pink skies, golden wishes & a sprinkle of magic for Prishu 💗</footer>
+</div>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+let heartTimer=null;
+function hearts(){if(heartTimer)return;heartTimer=setInterval(()=>{const h=document.createElement('span');h.className='heart';h.textContent=['💗','💖','💕','✨','🌸'][Math.floor(Math.random()*5)];h.style.left=Math.random()*100+'vw';h.style.fontSize=(16+Math.random()*24)+'px';h.style.animationDuration=(5+Math.random()*5)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),10500)},500)}
+function confetti(){for(let i=0;i<95;i++){setTimeout(()=>{const c=document.createElement('i');c.className='confetti';c.style.left=Math.random()*100+'vw';c.style.background=['#ff78b5','#ad7af0','#ffd36b','#ffb1d7','#cbb2ff'][Math.floor(Math.random()*5)];c.style.animationDuration=(2.4+Math.random()*2)+'s';document.body.appendChild(c);setTimeout(()=>c.remove(),5000)},i*13)}}
+$('start').addEventListener('click',()=>{$('intro').style.display='none';$('surprise').style.display='block';hearts();confetti();window.scrollTo({top:0,behavior:'smooth'})});
+$('music').addEventListener('click',()=>window.open('https://www.youtube.com/results?search_query=happy+birthday+song','_blank','noopener'));
+$('unwrap').addEventListener('click',()=>{$('gift').textContent='💝';$('gift').classList.add('open');$('giftText').textContent='Surprise! Your gift is a pocketful of good wishes: more smiles, brave dreams, peaceful days, and a whole year of little wins. 🎉💗';$('unwrap').textContent='Gift opened! ✨';confetti()});
+const qs=[
+{q:'What is the sweetest birthday gift that costs nothing?',a:['A heartfelt message 💌','A receipt 🧾','An empty box 📦'],c:0,fb:'A thoughtful message can make someone feel remembered and appreciated. 💗'},
+{q:'What should every birthday star get plenty of?',a:['Extra worries 😵‍💫','Kindness and laughter 🌷','More chores 🧹'],c:1,fb:'Kindness and laughter make a birthday feel warm and memorable. ✨'},
+{q:'What is a lovely way to celebrate an online friend?',a:['Send a sincere wish 💌','Ignore the day 🙈','Send a blank message 📭'],c:0,fb:'A sincere wish can cross the distance and brighten their day. 🌍💗'}
+];let qi=0;
+function draw(){const q=qs[qi];$('question').textContent=q.q;$('choices').innerHTML='';q.a.forEach((txt,i)=>{const b=document.createElement('button');b.className='alt';b.textContent=txt;b.onclick=()=>{$('feedback').textContent=i===q.c?q.fb:'Try again, birthday detective! 😄';};$('choices').appendChild(b)});$('feedback').textContent=''}
+$('next').onclick=()=>{qi=(qi+1)%qs.length;draw()};
+$('again').onclick=()=>{confetti();hearts();window.scrollTo({top:0,behavior:'smooth'})};
+</script>
+</body>
+</html>
